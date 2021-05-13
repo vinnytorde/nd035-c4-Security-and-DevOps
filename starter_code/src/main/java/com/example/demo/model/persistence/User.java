@@ -12,6 +12,8 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
 
 
 @Entity
@@ -31,7 +33,13 @@ public class User {
     @JoinColumn(name = "cart_id", referencedColumnName = "id")
 	@JsonIgnore
     private Cart cart;
-	
+
+	@JsonProperty
+	@Column(nullable = false)
+	@Getter
+	@Setter
+	private String password;
+
 	public Cart getCart() {
 		return cart;
 	}
