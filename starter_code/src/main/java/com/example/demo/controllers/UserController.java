@@ -4,6 +4,7 @@ import java.security.SecureRandom;
 import java.util.Objects;
 import java.util.Optional;
 
+import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -24,6 +25,7 @@ import com.example.demo.model.requests.CreateUserRequest;
 
 @RestController
 @RequestMapping("/api/user")
+@Slf4j
 public class UserController {
 	
 	@Autowired
@@ -43,12 +45,17 @@ public class UserController {
 	@GetMapping("/{username}")
 	public ResponseEntity<User> findByUserName(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
-		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
+		if (Objects.isNull(user)){
+			log.error(String.format("cannot find user %s: ", username));
+			return ResponseEntity.notFound().build();
+		}
+		return ResponseEntity.ok(user);
 	}
 	
 	@PostMapping("/create")
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		if (Objects.isNull(createUserRequest.getPassword()) || createUserRequest.getPassword().length() < 7 || !createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
+			log.error(String.format("cannot create user %s: invalid password combination", createUserRequest.getUsername()));
 			return ResponseEntity.badRequest().build();
 		}
 
@@ -60,6 +67,7 @@ public class UserController {
 		cartRepository.save(cart);
 		user.setCart(cart);
 		userRepository.save(user);
+		log.info(String.format("user saved successfully: %s", user.getUsername()));
 		return ResponseEntity.ok(user);
 	}
 

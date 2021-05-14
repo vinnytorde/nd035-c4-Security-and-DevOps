@@ -1,4 +1,5 @@
 /Users/vinny/Codebase/nd035-c4-Security-and-DevOps/starter_code/src/main/java/com/example/demo/security/JWTAuthenticationVerificationFilter.java
+/Users/vinny/Codebase/nd035-c4-Security-and-DevOps/starter_code/src/main/java/com/example/demo/security/SecurityConstants.java
 /Users/vinny/Codebase/nd035-c4-Security-and-DevOps/starter_code/src/main/java/com/example/demo/model/requests/CreateUserRequest.java
 /Users/vinny/Codebase/nd035-c4-Security-and-DevOps/starter_code/src/main/java/com/example/demo/model/persistence/repositories/UserRepository.java
 /Users/vinny/Codebase/nd035-c4-Security-and-DevOps/starter_code/src/main/java/com/example/demo/model/persistence/User.java
@@ -6,7 +7,6 @@
 /Users/vinny/Codebase/nd035-c4-Security-and-DevOps/starter_code/src/main/java/com/example/demo/security/WebSecurityConfiguration.java
 /Users/vinny/Codebase/nd035-c4-Security-and-DevOps/starter_code/src/main/java/com/example/demo/controllers/OrderController.java
 /Users/vinny/Codebase/nd035-c4-Security-and-DevOps/starter_code/src/main/java/com/example/demo/controllers/ItemController.java
-/Users/vinny/Codebase/nd035-c4-Security-and-DevOps/starter_code/src/main/java/com/example/demo/security/BCryptEncoder.java
 /Users/vinny/Codebase/nd035-c4-Security-and-DevOps/starter_code/src/main/java/com/example/demo/SareetaApplication.java
 /Users/vinny/Codebase/nd035-c4-Security-and-DevOps/starter_code/src/main/java/com/example/demo/controllers/UserController.java
 /Users/vinny/Codebase/nd035-c4-Security-and-DevOps/starter_code/src/main/java/com/example/demo/model/persistence/UserOrder.java

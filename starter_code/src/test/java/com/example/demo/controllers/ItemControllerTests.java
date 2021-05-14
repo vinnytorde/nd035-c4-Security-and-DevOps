@@ -38,7 +38,7 @@ public class ItemControllerTests {
     public void setup(){
         when(itemRepository.findAll()).thenReturn(Collections.singletonList(thingy));
         when(itemRepository.findById(any())).thenReturn(Optional.of(thingy));
-        when(itemRepository.findByName(anyString())).thenReturn(Collections.singletonList(thingy));
+        when(itemRepository.findByName(thingy.getName())).thenReturn(Collections.singletonList(thingy));
     }
 
     @Test
@@ -60,10 +60,17 @@ public class ItemControllerTests {
 
     @Test
     public void getItemsByName(){
-        val actual = itemController.getItemsByName("thingies");
+        val actual = itemController.getItemsByName(thingy.getName());
 
         assertEquals(200, actual.getStatusCodeValue());
         assertEquals(1, actual.getBody().size());
         assertEquals(thingy, actual.getBody().iterator().next());
+    }
+
+    @Test
+    public void getItemsByNameNoItemsFound(){
+        val actual = itemController.getItemsByName("not a thingy");
+
+        assertEquals(404, actual.getStatusCodeValue());
     }
 }

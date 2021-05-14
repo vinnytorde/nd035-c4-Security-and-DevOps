@@ -49,13 +49,24 @@ public class UserControllerTests {
     @Test
     public void findById(){
         val actual = userController.findById(1L);
+
+        assertEquals(200, actual.getStatusCodeValue());
         assertEquals(vinny, actual.getBody());
     }
 
     @Test
     public void findByUserName(){
         val actual = userController.findByUserName(vinny.getUsername());
+
+        assertEquals(200, actual.getStatusCodeValue());
         assertEquals(vinny, actual.getBody());
+    }
+
+    @Test
+    public void findByUserNameNotFound(){
+        val actual = userController.findByUserName(vinny.getUsername());
+
+        assertEquals(404, actual.getStatusCodeValue());
     }
 
     @Test
