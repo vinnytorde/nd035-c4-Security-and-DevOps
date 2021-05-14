@@ -43,7 +43,7 @@ public class UserControllerTests {
     public void setMocks(){
         when(bCryptPasswordEncoder.encode(anyString())).thenReturn(encoded);
         when(userRepository.findById(any())).thenReturn(Optional.of(vinny));
-        when(userRepository.findByUsername(any())).thenReturn(vinny);
+        when(userRepository.findByUsername(vinny.getUsername())).thenReturn(vinny);
     }
 
     @Test
@@ -64,7 +64,7 @@ public class UserControllerTests {
 
     @Test
     public void findByUserNameNotFound(){
-        val actual = userController.findByUserName(vinny.getUsername());
+        val actual = userController.findByUserName("not vinny");
 
         assertEquals(404, actual.getStatusCodeValue());
     }
