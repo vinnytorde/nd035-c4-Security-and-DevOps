@@ -291,3 +291,78 @@ insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505
 2021-05-14 16:07:04.031 ERROR 8225 --- [http-nio-8080-exec-3] c.e.demo.controllers.UserController      : cannot create user other: invalid password combination
 2021-05-14 16:07:04.444 ERROR 8225 --- [http-nio-8080-exec-6] c.e.demo.controllers.UserController      : cannot create user other: invalid password combination
 2021-05-14 16:07:04.915 ERROR 8225 --- [http-nio-8080-exec-7] c.e.demo.controllers.UserController      : cannot create user other: invalid password combination
+2021-05-14 17:16:25.307  INFO 8225 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-14 17:16:25.318  INFO 8225 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-14 17:16:25.335  INFO 8225 --- [Thread-9] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2021-05-14 17:16:25.337  INFO 8225 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-14 17:16:25.340  INFO 8225 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-05-14 17:33:00.341  INFO 13516 --- [main] c.example.demo.SareetaApplicationTests   : Starting SareetaApplicationTests on vincents-MBP.lan with PID 13516 (started by vinny in /Users/vinny/Codebase/nd035-c4-Security-and-DevOps/starter_code)
+2021-05-14 17:33:00.343  INFO 13516 --- [main] c.example.demo.SareetaApplicationTests   : No active profile set, falling back to default profiles: default
+2021-05-14 17:33:01.547  INFO 13516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-05-14 17:33:01.660  INFO 13516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98ms. Found 4 repository interfaces.
+2021-05-14 17:33:02.462  INFO 13516 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$17fd66f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-14 17:33:02.763  INFO 13516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-14 17:33:02.982  INFO 13516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-14 17:33:03.089  INFO 13516 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-05-14 17:33:03.181  INFO 13516 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2021-05-14 17:33:03.190  INFO 13516 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-05-14 17:33:03.429  INFO 13516 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-05-14 17:33:03.685  INFO 13516 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-14 17:33:05.100  INFO 13516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-14 17:33:06.121  WARN 13516 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-14 17:33:06.357  INFO 13516 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77f04d1a, org.springframework.security.web.context.SecurityContextPersistenceFilter@337cb81d, org.springframework.security.web.header.HeaderWriterFilter@446a692f, org.springframework.web.filter.CorsFilter@27682fa9, org.springframework.security.web.authentication.logout.LogoutFilter@718d6b7c, com.example.demo.security.JWTAuthenticationFilter@2fb70301, com.example.demo.security.JWTAuthenticationVerificationFilter@126f2eb8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e9bd2c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6bf28f61, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67823972, org.springframework.security.web.session.SessionManagementFilter@a30dbc0, org.springframework.security.web.access.ExceptionTranslationFilter@628bcf2c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@481bae3f]
+2021-05-14 17:33:07.375  INFO 13516 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-14 17:33:07.650  INFO 13516 --- [main] c.example.demo.SareetaApplicationTests   : Started SareetaApplicationTests in 7.736 seconds (JVM running for 8.835)
+2021-05-14 17:33:08.036 ERROR 13516 --- [main] c.e.demo.controllers.CartController      : cannot find user does not exist: 
+2021-05-14 17:33:08.041 ERROR 13516 --- [main] c.e.demo.controllers.CartController      : cannot find user does not exist: 
+2021-05-14 17:33:08.044 ERROR 13516 --- [main] c.e.demo.controllers.CartController      : cannot find item ID 99: 
+2021-05-14 17:33:08.046 ERROR 13516 --- [main] c.e.demo.controllers.CartController      : cannot find item ID 99: 
+2021-05-14 17:33:08.072 ERROR 13516 --- [main] c.e.demo.controllers.UserController      : cannot find user not vinny: 
+2021-05-14 17:33:08.074  INFO 13516 --- [main] c.e.demo.controllers.UserController      : user saved successfully: vinny
+2021-05-14 17:33:08.077 ERROR 13516 --- [main] c.e.demo.controllers.UserController      : cannot create user vinny: invalid password combination
+2021-05-14 17:33:08.119  INFO 13516 --- [main] c.e.demo.controllers.OrderController     : order ID null saved successfully for: vinny
+2021-05-14 17:33:08.121 ERROR 13516 --- [main] c.e.demo.controllers.OrderController     : cannot find user not vinny: 
+2021-05-14 17:33:08.124 ERROR 13516 --- [main] c.e.demo.controllers.OrderController     : cannot find user not vinny: 
+2021-05-14 17:33:08.134 ERROR 13516 --- [main] c.e.demo.controllers.ItemController      : cannot find item by name not a thingy: 
+2021-05-14 17:33:08.144  INFO 13516 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-14 17:33:08.146  INFO 13516 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-14 17:33:08.152  INFO 13516 --- [Thread-3] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2021-05-14 17:33:08.153  INFO 13516 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-14 17:33:08.407  INFO 13516 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-05-14 17:47:53.763  INFO 14156 --- [main] c.example.demo.SareetaApplicationTests   : Starting SareetaApplicationTests on vincents-MBP.lan with PID 14156 (started by vinny in /Users/vinny/Codebase/nd035-c4-Security-and-DevOps/starter_code)
+2021-05-14 17:47:53.764  INFO 14156 --- [main] c.example.demo.SareetaApplicationTests   : No active profile set, falling back to default profiles: default
+2021-05-14 17:47:54.488  INFO 14156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-05-14 17:47:54.564  INFO 14156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67ms. Found 4 repository interfaces.
+2021-05-14 17:47:55.102  INFO 14156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$88e534db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-14 17:47:55.318  INFO 14156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-14 17:47:55.475  INFO 14156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-14 17:47:55.558  INFO 14156 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-05-14 17:47:55.608  INFO 14156 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2021-05-14 17:47:55.611  INFO 14156 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-05-14 17:47:55.752  INFO 14156 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-05-14 17:47:55.891  INFO 14156 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-14 17:47:56.628  INFO 14156 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-14 17:47:57.329  WARN 14156 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-14 17:47:57.466  INFO 14156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2fb70301, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e9bd2c8, org.springframework.security.web.header.HeaderWriterFilter@76104df5, org.springframework.web.filter.CorsFilter@126f2eb8, org.springframework.security.web.authentication.logout.LogoutFilter@4eb5764d, com.example.demo.security.JWTAuthenticationFilter@67823972, com.example.demo.security.JWTAuthenticationVerificationFilter@1f1574c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ac3d530, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21ab919c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16c9e378, org.springframework.security.web.session.SessionManagementFilter@3f9e8af5, org.springframework.security.web.access.ExceptionTranslationFilter@366b4a7b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4c114687]
+2021-05-14 17:47:57.853  INFO 14156 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-14 17:47:58.119  INFO 14156 --- [main] c.example.demo.SareetaApplicationTests   : Started SareetaApplicationTests in 4.701 seconds (JVM running for 5.389)
+2021-05-14 17:47:58.451 ERROR 14156 --- [main] c.e.demo.controllers.CartController      : cannot find user does not exist: 
+2021-05-14 17:47:58.457 ERROR 14156 --- [main] c.e.demo.controllers.CartController      : cannot find user does not exist: 
+2021-05-14 17:47:58.462 ERROR 14156 --- [main] c.e.demo.controllers.CartController      : cannot find item ID 99: 
+2021-05-14 17:47:58.464 ERROR 14156 --- [main] c.e.demo.controllers.CartController      : cannot find item ID 99: 
+2021-05-14 17:47:58.493 ERROR 14156 --- [main] c.e.demo.controllers.UserController      : cannot find user not vinny: 
+2021-05-14 17:47:58.495  INFO 14156 --- [main] c.e.demo.controllers.UserController      : user saved successfully: vinny
+2021-05-14 17:47:58.498 ERROR 14156 --- [main] c.e.demo.controllers.UserController      : cannot create user vinny: invalid password combination
+2021-05-14 17:47:58.530  INFO 14156 --- [main] c.e.demo.controllers.OrderController     : order ID null saved successfully for: vinny
+2021-05-14 17:47:58.532 ERROR 14156 --- [main] c.e.demo.controllers.OrderController     : cannot find user not vinny: 
+2021-05-14 17:47:58.534 ERROR 14156 --- [main] c.e.demo.controllers.OrderController     : cannot find user not vinny: 
+2021-05-14 17:47:58.541 ERROR 14156 --- [main] c.e.demo.controllers.ItemController      : cannot find item by name not a thingy: 
+2021-05-14 17:47:58.553  INFO 14156 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-14 17:47:58.554  INFO 14156 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-14 17:47:58.560  INFO 14156 --- [Thread-3] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2021-05-14 17:47:58.561  INFO 14156 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-14 17:47:58.816  INFO 14156 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
