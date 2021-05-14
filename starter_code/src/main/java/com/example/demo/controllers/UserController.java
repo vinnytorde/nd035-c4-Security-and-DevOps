@@ -33,7 +33,7 @@ public class UserController {
 	private CartRepository cartRepository;
 
 	@Autowired
-	BCryptPasswordEncoder bCryptPasswordEncoder;
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	@GetMapping("/id/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
@@ -62,13 +62,5 @@ public class UserController {
 		userRepository.save(user);
 		return ResponseEntity.ok(user);
 	}
-
-	private static byte[] createSalt() {
-		SecureRandom random = new SecureRandom();
-		byte[] salt = new byte[16];
-		random.nextBytes(salt);
-		return salt;
-	}
-
 
 }

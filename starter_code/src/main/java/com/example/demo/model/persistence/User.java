@@ -12,12 +12,14 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 
 @Entity
 @Table(name = "user")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
 	@Id
